@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+/* ── DARK MODE ── */
+  :root.dark {
+    --bg:        #080810;
+    --surface:   #10101e;
+    --surface2:  #18182a;
+    --border:    rgba(255,255,255,0.07);
+    --border2:   rgba(255,255,255,0.12);
+    --text:      #ededf5;
+    --muted:     #5a5a70;
+    --muted2:    #8888a0;
+    --orb1:      rgba(229, 239, 213, 0.055);
+    --orb2:      rgba(87,180,255,0.045);
+    --grid:      rgba(255,255,255,0.016);
+    --nav-bg:    rgba(8,8,16,0.88);
+    
+  }
+
+ /* ── LIGHT MODE (warm white with personality) ── */
+  :root.light {
+    --bg:        #fafaf7;
+    --surface:   #ffffff;
+    --surface2:  #f0f0ea;
+    --border:    rgba(0,0,0,0.08);
+    --border2:   rgba(0,0,0,0.13);
+    --text:      #0e0e0e;
+    --muted:     #19a279b2;
+    --muted2:    #484813;
+    --orb1:      rgba(31, 157, 66, 0.382);
+    --orb2:      rgba(57, 220, 130, 0.326);
+    --grid:      rgba(129, 81, 81, 0);
+    --nav-bg:    rgba(250,250,247,0.92);
+    
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--surface); }
+  ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 3px; }
+}
+
+@layer utilities {
+  .bg-theme-bg       { background-color: var(--bg); }
+  .bg-theme-surface  { background-color: var(--surface); }
+  .bg-theme-surface2 { background-color: var(--surface2); }
+  .text-theme        { color: var(--text); }
+  .text-muted        { color: var(--muted); }
+  .text-muted2       { color: var(--muted2); }
+  .border-theme      { border-color: var(--border); }
+  .border-theme2     { border-color: var(--border2); }
+  .nav-bg            { background-color: var(--nav-bg); }
+}
