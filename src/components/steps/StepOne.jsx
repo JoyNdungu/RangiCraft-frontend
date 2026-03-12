@@ -28,14 +28,14 @@ export default function StepOne() {
 
   return (
     <div className="animate-fade-up">
-      <h2 className="font-syne font-extrabold text-2xl text-theme mb-1">
+      <h2 className="font-syne font-extrabold text-xl md:text-2xl text-theme mb-1">
         Tell us about your app
       </h2>
-      <p className="text-muted2 text-sm mb-8">
+      <p className="text-muted2 text-sm mb-6 md:mb-8">
         We'll use this to tailor the palette to your product category and market.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
 
         {/* App Type */}
         <div>
@@ -47,7 +47,7 @@ export default function StepOne() {
               <button
                 key={a.value}
                 onClick={() => update('appType', a.value)}
-                className={`text-left px-4 py-3 rounded-xl border text-sm
+                className={`text-left px-3 md:px-4 py-2.5 md:py-3 rounded-xl border text-sm
                   transition-all duration-150
                   ${selections.appType === a.value
                     ? 'border-brand-accent bg-brand-accent/10 text-brand-accent'
@@ -70,7 +70,7 @@ export default function StepOne() {
               <button
                 key={m.value}
                 onClick={() => update('market', m.value)}
-                className={`text-left px-4 py-3 rounded-xl border text-sm
+                className={`text-left px-3 md:px-4 py-2.5 md:py-3 rounded-xl border text-sm
                   transition-all duration-150
                   ${selections.market === m.value
                     ? 'border-brand-accent bg-brand-accent/10 text-brand-accent'
@@ -89,7 +89,7 @@ export default function StepOne() {
         onClick={nextStep}
         disabled={!ready}
         className="w-full font-syne font-extrabold text-sm tracking-wide
-          bg-brand-accent text-[#080810] py-4 rounded-xl
+          bg-brand-accent text-[#080810] py-3.5 md:py-4 rounded-xl
           hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(184,255,79,0.2)]
           transition-all duration-200
           disabled:opacity-30 disabled:cursor-not-allowed

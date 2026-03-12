@@ -12,7 +12,7 @@ export default function StepFour() {
   const [activeTab, setActiveTab] = useState(0)
   const [copiedHex, setCopiedHex] = useState(null)
   const [copiedCode, setCopiedCode] = useState(false)
-  const [saveStatus, setSaveStatus] = useState('idle') // idle | saving | saved | error
+  const [saveStatus, setSaveStatus] = useState('idle')
 
   const [bg, surface, primary, accent, text] = palette.colors.map(c => c.hex)
 
@@ -52,26 +52,24 @@ export default function StepFour() {
   }
 
   return (
-    <div className="animate-fade-up space-y-8">
+    <div className="animate-fade-up space-y-6 md:space-y-8">
 
-      {/* Header */}
-      <div className="flex items-start justify-between gap-4">
+      {/* Header — stacks on mobile */}
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
         <div>
-          <h2 className="font-syne font-extrabold text-2xl text-theme mb-1">
+          <h2 className="font-syne font-extrabold text-xl md:text-2xl text-theme mb-1">
             {palette.name}
           </h2>
           <p className="text-muted2 text-sm max-w-md">{palette.desc}</p>
         </div>
 
-        {/* Action buttons */}
-        <div className="flex gap-2 flex-shrink-0">
-
-          {/* Save button */}
+        {/* Action buttons — full width on mobile */}
+        <div className="flex gap-2 md:flex-shrink-0">
           <button
             onClick={handleSave}
             disabled={saveStatus === 'saving' || saveStatus === 'saved'}
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs
-              font-syne font-bold transition-all duration-200
+            className={`flex-1 md:flex-none flex items-center justify-center gap-2
+              px-4 py-2 rounded-xl text-xs font-syne font-bold transition-all duration-200
               ${saveStatus === 'saved'
                 ? 'border border-brand-accent/40 bg-brand-accent/10 text-brand-accent'
                 : saveStatus === 'error'
@@ -90,17 +88,16 @@ export default function StepFour() {
             )}
           </button>
 
-          {/* Start Over button */}
           <button
             onClick={reset}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl border border-theme
-              text-muted2 text-xs font-syne font-bold hover:border-theme2
-              hover:text-theme transition-all duration-200"
+            className="flex-1 md:flex-none flex items-center justify-center gap-2
+              px-4 py-2 rounded-xl border border-theme text-muted2 text-xs
+              font-syne font-bold hover:border-theme2 hover:text-theme
+              transition-all duration-200"
           >
             <FiRefreshCw size={13} />
             Start Over
           </button>
-
         </div>
       </div>
 
@@ -109,28 +106,30 @@ export default function StepFour() {
         <p className="text-xs uppercase tracking-widest text-muted mb-3">
           Color Palette
         </p>
-        <div className="grid grid-cols-5 gap-3">
+        <div className="grid grid-cols-5 gap-1.5 md:gap-3">
           {palette.colors.map((c) => (
             <button
               key={c.hex}
               onClick={() => copyHex(c.hex)}
-              className="group rounded-xl overflow-hidden border border-theme
+              className="group rounded-lg md:rounded-xl overflow-hidden border border-theme
                 hover:scale-105 transition-transform duration-200"
             >
-              <div className="h-20 w-full relative" style={{ background: c.hex }}>
+              <div className="h-12 md:h-20 w-full relative" style={{ background: c.hex }}>
                 <div className="absolute inset-0 flex items-center justify-center
                   bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   {copiedHex === c.hex
-                    ? <FiCheck size={16} className="text-white" />
-                    : <FiCopy size={14} className="text-white" />
+                    ? <FiCheck size={14} className="text-white" />
+                    : <FiCopy size={12} className="text-white" />
                   }
                 </div>
               </div>
-              <div className="bg-theme-surface2 p-2">
-                <p className="text-[0.58rem] uppercase tracking-wider text-muted">
+              <div className="bg-theme-surface2 p-1.5 md:p-2">
+                <p className="text-[0.5rem] md:text-[0.58rem] uppercase tracking-wider text-muted hidden md:block">
                   {c.role}
                 </p>
-                <p className="font-mono text-xs text-theme font-medium">{c.hex}</p>
+                <p className="font-mono text-[0.55rem] md:text-xs text-theme font-medium truncate">
+                  {c.hex}
+                </p>
               </div>
             </button>
           ))}
@@ -145,7 +144,7 @@ export default function StepFour() {
         <div className="rounded-2xl overflow-hidden border border-theme">
 
           {/* Fake navbar */}
-          <div className="flex items-center justify-between px-5 py-3"
+          <div className="flex items-center justify-between px-4 md:px-5 py-3"
             style={{ background: surface }}>
             <span className="font-syne font-bold text-sm" style={{ color: text }}>
               MyApp
@@ -157,15 +156,16 @@ export default function StepFour() {
           </div>
 
           {/* Fake body */}
-          <div className="p-5 grid grid-cols-1 md:grid-cols-3 gap-4"
+          <div className="p-3 md:p-5 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4"
             style={{ background: bg }}>
 
             {/* Balance card */}
-            <div className="rounded-xl p-4 col-span-2" style={{ background: surface }}>
+            <div className="rounded-xl p-3 md:p-4 md:col-span-2" style={{ background: surface }}>
               <p className="text-xs mb-2 opacity-60" style={{ color: text }}>
                 Total Balance
               </p>
-              <p className="font-syne font-bold text-xl mb-4" style={{ color: text }}>
+              <p className="font-syne font-bold text-lg md:text-xl mb-3 md:mb-4"
+                style={{ color: text }}>
                 KES 48,200
               </p>
               <div className="flex gap-2">
@@ -181,7 +181,7 @@ export default function StepFour() {
             </div>
 
             {/* Recent transactions */}
-            <div className="rounded-xl p-4" style={{ background: surface }}>
+            <div className="rounded-xl p-3 md:p-4" style={{ background: surface }}>
               <p className="text-xs mb-3 opacity-60" style={{ color: text }}>Recent</p>
               {[
                 ['Groceries', '-KES 850'],
@@ -216,7 +216,8 @@ export default function StepFour() {
               <button
                 key={f.label}
                 onClick={() => setActiveTab(i)}
-                className={`px-4 py-1.5 rounded-lg text-xs font-mono transition-all duration-150
+                className={`px-3 md:px-4 py-1.5 rounded-lg text-xs font-mono
+                  transition-all duration-150
                   ${activeTab === i
                     ? 'bg-brand-accent/10 border border-brand-accent text-brand-accent'
                     : 'border border-theme text-muted hover:border-theme2 hover:text-theme'
@@ -231,12 +232,12 @@ export default function StepFour() {
         <div className="rounded-xl overflow-hidden border border-theme">
           <div className="flex items-center justify-between px-4 py-2
             bg-theme-surface2 border-b border-theme">
-            <span className="font-mono text-xs text-muted">
+            <span className="font-mono text-xs text-muted truncate mr-2">
               {files[activeTab]?.filename}
             </span>
             <button
               onClick={copyCode}
-              className="flex items-center gap-1.5 text-xs font-mono
+              className="flex items-center gap-1.5 text-xs font-mono flex-shrink-0
                 text-muted2 hover:text-brand-accent transition-colors duration-200"
             >
               {copiedCode
@@ -245,15 +246,15 @@ export default function StepFour() {
               }
             </button>
           </div>
-          <pre className="p-4 text-xs font-mono leading-relaxed overflow-x-auto
-            bg-[#0b0b16] text-[#c0c0d8] whitespace-pre">
+          <pre className="p-3 md:p-4 text-xs font-mono leading-relaxed overflow-x-auto
+            bg-[#0b0b16] text-[#c0c0d8] whitespace-pre max-h-64 md:max-h-none">
             {files[activeTab]?.code}
           </pre>
         </div>
       </div>
 
       {/* Cultural Insight */}
-      <div className="rounded-xl border border-brand-accent/20 bg-brand-accent/5 p-5">
+      <div className="rounded-xl border border-brand-accent/20 bg-brand-accent/5 p-4 md:p-5">
         <p className="text-xs uppercase tracking-widest text-brand-accent mb-2">
           Why this theme works
         </p>
@@ -261,8 +262,8 @@ export default function StepFour() {
       </div>
 
       {/* Suggestion */}
-      <div className="rounded-xl border border-theme bg-theme-surface2 p-5
-        flex items-start gap-4">
+      <div className="rounded-xl border border-theme bg-theme-surface2 p-4 md:p-5
+        flex items-start gap-3 md:gap-4">
         <span className="text-xl flex-shrink-0">⁉️</span>
         <div>
           <p className="text-xs uppercase tracking-widest text-muted mb-1">
