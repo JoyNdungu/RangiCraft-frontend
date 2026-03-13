@@ -8,15 +8,16 @@
 Color palette generator built for African market UI/UX designers.
 
 
-🌍 Live Demo → rangi-craft-frontend.vercel.app
+### 🌍 Live Demo → [rangi-craft-frontend.vercel.app](https://rangi-craft-frontend.vercel.app/)
 
 
-📸 Overview
+## 📸 Overview
+
 
 RangiCraft helps designers and developers generate culturally-aware, ready-to-use color palettes tailored to their app category, target African market, brand mood, and preferred styling format.
 
 
-In 3 steps you get:
+### In 3 steps you get:
 
 
 A full 5-color palette with hex codes you can copy instantly
