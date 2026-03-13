@@ -88,16 +88,19 @@ cd RangiCraft-frontend
 npm install
 ```
 Environment Variables
+
 Create a .env file in the root:
 ```
 VITE_API_URL=http://localhost:5000/api
 ```
 For production point this to your deployed backend URL.
+
 Running Locally
 ```
 npm run dev
 ```
 App runs at http://localhost:5173
+
 Building for Production
 ```
 npm run build
@@ -161,6 +164,7 @@ src/
 Contributions are welcome! Here's how to get started:
 
 1.Fork the repository
+
 2.Create a new branch:
 
 ```
