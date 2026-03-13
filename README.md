@@ -1,4 +1,4 @@
-<img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/45d874b1-ff8f-4e38-b2bf-63596c04d80f" />
+<img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/45d874b1-ff8f-4e38-b2bf-63596c04d80f" />
  RangiCraft — Frontend
 
 Craft colors that bring your UI to life.
@@ -7,7 +7,9 @@ Color palette generator built for African market UI/UX designers.
 🌍 Live Demo → rangi-craft-frontend.vercel.app
 
 📸 Overview
+
 RangiCraft helps designers and developers generate culturally-aware, ready-to-use color palettes tailored to their app category, target African market, brand mood, and preferred styling format.
+
 In 3 steps you get:
 
 A full 5-color palette with hex codes you can copy instantly
@@ -19,13 +21,21 @@ A cultural insight explaining why the palette works for your market
 ✨ Features
 
 🌙 Dark / Light mode — follows system preference, remembers your choice
+
 🎯 3-step generator — App category → Brand mood → Styling format
+
 🖌 10 app categories — Fintech, Health, E-Commerce, Social, Education, Logistics, Agriculture, Government, Entertainment, SaaS
+
 🌍 6 African market targets — East, West, Southern, North Africa, Pan-African, Global
+
 💡 10 brand moods — Trustworthy, Energetic, Calm, Playful, Premium, Bold, Minimal, Warm, Professional, Youthful
+
 ⚙️ 8 styling approaches — CSS Variables, External CSS, Inline HTML, React style{{}}, className, Tailwind Utilities, Styled Components, CSS Modules
+
 📋 One-click copy — copy any hex code or full code block instantly
+
 💾 Save palettes — save to MongoDB via REST API
+
 📱 Fully mobile responsive
 
 
@@ -33,10 +43,13 @@ A cultural insight explaining why the palette works for your market
 TechnologyPurposeReact 18 + ViteFrontend framework + build toolTailwind CSSUtility-first stylingReact Router DOMClient-side routingAxiosHTTP requests to backend APIReact IconsIcon libraryCSS VariablesDynamic theming system
 
 🚀 Getting Started
+
 Prerequisites
 
 Node.js v18+
+
 npm or yarn
+
 RangiCraft backend running (see backend repo)
 
 Installation
@@ -67,6 +80,7 @@ npm run preview
 
 📁 Project Structure
 src/
+
 ├── components/
 │   ├── steps/
 │   │   ├── StepOne.jsx       # App category + market selection
