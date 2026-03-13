@@ -1,4 +1,4 @@
-<img width="25" height="25" alt="logo" src="https://github.com/user-attachments/assets/daa63c4f-32c3-483f-8ab7-975c8a48479c" />
+<img width="250" height="250" alt="logo" src="https://github.com/user-attachments/assets/daa63c4f-32c3-483f-8ab7-975c8a48479c" />
 
 # RangiCraft — Frontend
 
@@ -173,4 +173,5 @@ git commit -m "add: your feature description"
 4.Push to your fork and open a Pull Request on GitHub
 
 
-Live: rangi-craft-frontend.vercel.app
+
+## Live: [rangi-craft-frontend.vercel.app](https://rangi-craft-frontend.vercel.app/)
