@@ -111,7 +111,7 @@ npm run preview
 
 ## 📁 Project Structure
 
-
+```
 src/
 
 ├── components/
@@ -155,7 +155,7 @@ src/
 ├── main.jsx
 
 └── index.css                 # Tailwind + CSS variables + custom utilities
-
+```
 
 
 ## 🤝 Contributing
