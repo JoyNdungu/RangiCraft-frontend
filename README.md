@@ -1,18 +1,23 @@
-<img width="1536" height="1024" alt="logo" src="https://github.com/user-attachments/assets/daa63c4f-32c3-483f-8ab7-975c8a48479c" />
+<img width="25" height="25" alt="logo" src="https://github.com/user-attachments/assets/daa63c4f-32c3-483f-8ab7-975c8a48479c" />
 
 # RangiCraft — Frontend
 
 ## Craft colors that bring your UI to life.
 
+
 Color palette generator built for African market UI/UX designers.
 
+
 🌍 Live Demo → rangi-craft-frontend.vercel.app
+
 
 📸 Overview
 
 RangiCraft helps designers and developers generate culturally-aware, ready-to-use color palettes tailored to their app category, target African market, brand mood, and preferred styling format.
 
+
 In 3 steps you get:
+
 
 A full 5-color palette with hex codes you can copy instantly
 
@@ -23,7 +28,9 @@ Ready-to-paste code in your exact styling format
 A cultural insight explaining why the palette works for your market
 
 
-✨ Features
+
+## ✨ Features
+
 
 🌙 Dark / Light mode — follows system preference, remembers your choice
 
@@ -44,10 +51,16 @@ A cultural insight explaining why the palette works for your market
 📱 Fully mobile responsive
 
 
-🛠 Tech Stack
+
+## 🛠 Tech Stack
+
+
 TechnologyPurposeReact 18 + ViteFrontend framework + build toolTailwind CSSUtility-first stylingReact Router DOMClient-side routingAxiosHTTP requests to backend APIReact IconsIcon libraryCSS VariablesDynamic theming system
 
-🚀 Getting Started
+
+
+## 🚀 Getting Started
+
 
 Prerequisites
 
@@ -57,7 +70,10 @@ npm or yarn
 
 RangiCraft backend running (see backend repo)
 
-Installation
+
+
+# Installation
+
 
 ## Clone the repo
 ```
@@ -87,7 +103,11 @@ npm run build
 npm run preview
 ```
 
-📁 Project Structure
+
+
+## 📁 Project Structure
+
+
 src/
 
 ├── components/
@@ -133,7 +153,10 @@ src/
 └── index.css                 # Tailwind + CSS variables + custom utilities
 
 
-🤝 Contributing
+
+## 🤝 Contributing
+
+
 Contributions are welcome! Here's how to get started:
 
 1.Fork the repository
