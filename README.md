@@ -1,7 +1,9 @@
-<img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/45d874b1-ff8f-4e38-b2bf-63596c04d80f" />
- RangiCraft — Frontend
+<img width="1536" height="1024" alt="logo" src="https://github.com/user-attachments/assets/daa63c4f-32c3-483f-8ab7-975c8a48479c" />
 
-Craft colors that bring your UI to life.
+# RangiCraft — Frontend
+
+## Craft colors that bring your UI to life.
+
 Color palette generator built for African market UI/UX designers.
 
 🌍 Live Demo → rangi-craft-frontend.vercel.app
@@ -13,8 +15,11 @@ RangiCraft helps designers and developers generate culturally-aware, ready-to-us
 In 3 steps you get:
 
 A full 5-color palette with hex codes you can copy instantly
+
 A live mini UI preview showing your palette on a real app screen
+
 Ready-to-paste code in your exact styling format
+
 A cultural insight explaining why the palette works for your market
 
 
@@ -53,12 +58,16 @@ npm or yarn
 RangiCraft backend running (see backend repo)
 
 Installation
+
+## Clone the repo
 ```
-# Clone the repo
 git clone https://github.com/JoyNdungu/RangiCraft-frontend.git
 cd RangiCraft-frontend
+```
 
-# Install dependencies
+## Install dependencies
+
+```
 npm install
 ```
 Environment Variables
@@ -82,25 +91,45 @@ npm run preview
 src/
 
 ├── components/
+
 │   ├── steps/
+
 │   │   ├── StepOne.jsx       # App category + market selection
+
 │   │   ├── StepTwo.jsx       # Brand mood selection
+
 │   │   ├── StepThree.jsx     # Styling format selection
+
 │   │   └── StepFour.jsx      # Results — palette, preview, code
+
 │   ├── Navbar.jsx            # Navigation + theme toggle
+
 │   └── StepTracker.jsx       # Step progress indicator
+
 ├── context/
+
 │   ├── ThemeContext.jsx       # Dark/light mode state
+
 │   └── GeneratorContext.jsx   # Generator step + selections state
+
 ├── pages/
+
 │   ├── Home.jsx              # Landing page
+
 │   └── Generate.jsx          # Generator page
+
 ├── utils/
+
 │   ├── palettes.js           # Palette database + code generators
+
 │   ├── api.js                # Axios base config
+
 │   └── paletteApi.js         # Palette API calls
+
 ├── App.jsx
+
 ├── main.jsx
+
 └── index.css                 # Tailwind + CSS variables + custom utilities
 
 
