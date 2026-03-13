@@ -1,16 +1,110 @@
-# React + Vite
+<img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/45d874b1-ff8f-4e38-b2bf-63596c04d80f" />
+ RangiCraft — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Craft colors that bring your UI to life.
+Color palette generator built for African market UI/UX designers.
 
-Currently, two official plugins are available:
+🌍 Live Demo → rangi-craft-frontend.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📸 Overview
+RangiCraft helps designers and developers generate culturally-aware, ready-to-use color palettes tailored to their app category, target African market, brand mood, and preferred styling format.
+In 3 steps you get:
 
-## React Compiler
+A full 5-color palette with hex codes you can copy instantly
+A live mini UI preview showing your palette on a real app screen
+Ready-to-paste code in your exact styling format
+A cultural insight explaining why the palette works for your market
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-## Expanding the ESLint configuration
+✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌙 Dark / Light mode — follows system preference, remembers your choice
+🎯 3-step generator — App category → Brand mood → Styling format
+🖌 10 app categories — Fintech, Health, E-Commerce, Social, Education, Logistics, Agriculture, Government, Entertainment, SaaS
+🌍 6 African market targets — East, West, Southern, North Africa, Pan-African, Global
+💡 10 brand moods — Trustworthy, Energetic, Calm, Playful, Premium, Bold, Minimal, Warm, Professional, Youthful
+⚙️ 8 styling approaches — CSS Variables, External CSS, Inline HTML, React style{{}}, className, Tailwind Utilities, Styled Components, CSS Modules
+📋 One-click copy — copy any hex code or full code block instantly
+💾 Save palettes — save to MongoDB via REST API
+📱 Fully mobile responsive
+
+
+🛠 Tech Stack
+TechnologyPurposeReact 18 + ViteFrontend framework + build toolTailwind CSSUtility-first stylingReact Router DOMClient-side routingAxiosHTTP requests to backend APIReact IconsIcon libraryCSS VariablesDynamic theming system
+
+🚀 Getting Started
+Prerequisites
+
+Node.js v18+
+npm or yarn
+RangiCraft backend running (see backend repo)
+
+Installation
+```
+# Clone the repo
+git clone https://github.com/JoyNdungu/RangiCraft-frontend.git
+cd RangiCraft-frontend
+
+# Install dependencies
+npm install
+```
+Environment Variables
+Create a .env file in the root:
+```
+VITE_API_URL=http://localhost:5000/api
+```
+For production point this to your deployed backend URL.
+Running Locally
+```
+npm run dev
+```
+App runs at http://localhost:5173
+Building for Production
+```
+npm run build
+npm run preview
+```
+
+📁 Project Structure
+src/
+├── components/
+│   ├── steps/
+│   │   ├── StepOne.jsx       # App category + market selection
+│   │   ├── StepTwo.jsx       # Brand mood selection
+│   │   ├── StepThree.jsx     # Styling format selection
+│   │   └── StepFour.jsx      # Results — palette, preview, code
+│   ├── Navbar.jsx            # Navigation + theme toggle
+│   └── StepTracker.jsx       # Step progress indicator
+├── context/
+│   ├── ThemeContext.jsx       # Dark/light mode state
+│   └── GeneratorContext.jsx   # Generator step + selections state
+├── pages/
+│   ├── Home.jsx              # Landing page
+│   └── Generate.jsx          # Generator page
+├── utils/
+│   ├── palettes.js           # Palette database + code generators
+│   ├── api.js                # Axios base config
+│   └── paletteApi.js         # Palette API calls
+├── App.jsx
+├── main.jsx
+└── index.css                 # Tailwind + CSS variables + custom utilities
+
+
+🤝 Contributing
+Contributions are welcome! Here's how to get started:
+
+1.Fork the repository
+2.Create a new branch:
+
+```
+git checkout -b feature/your-feature-name
+```
+3.Make your changes and commit:
+
+```
+git commit -m "add: your feature description"
+```
+4.Push to your fork and open a Pull Request on GitHub
+
+
+Live: rangi-craft-frontend.vercel.app
