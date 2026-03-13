@@ -8,7 +8,7 @@
 Color palette generator built for African market UI/UX designers.
 
 
-### 🌍 Live Demo → [rangi-craft-frontend.vercel.app](https://rangi-craft-frontend.vercel.app/)
+🌍 Live Demo → [rangi-craft-frontend.vercel.app](https://rangi-craft-frontend.vercel.app/)
 
 
 ## 📸 Overview
@@ -33,23 +33,23 @@ A cultural insight explaining why the palette works for your market
 ## ✨ Features
 
 
-🌙 Dark / Light mode — follows system preference, remembers your choice
+Dark / Light mode — follows system preference, remembers your choice
 
-🎯 3-step generator — App category → Brand mood → Styling format
+3-step generator — App category → Brand mood → Styling format
 
-🖌 10 app categories — Fintech, Health, E-Commerce, Social, Education, Logistics, Agriculture, Government, Entertainment, SaaS
+10 app categories — Fintech, Health, E-Commerce, Social, Education, Logistics, Agriculture, Government, Entertainment, SaaS
 
-🌍 6 African market targets — East, West, Southern, North Africa, Pan-African, Global
+6 African market targets — East, West, Southern, North Africa, Pan-African, Global
 
-💡 10 brand moods — Trustworthy, Energetic, Calm, Playful, Premium, Bold, Minimal, Warm, Professional, Youthful
+10 brand moods — Trustworthy, Energetic, Calm, Playful, Premium, Bold, Minimal, Warm, Professional, Youthful
 
-⚙️ 8 styling approaches — CSS Variables, External CSS, Inline HTML, React style{{}}, className, Tailwind Utilities, Styled Components, CSS Modules
+8 styling approaches — CSS Variables, External CSS, Inline HTML, React style{{}}, className, Tailwind Utilities, Styled Components, CSS Modules
 
-📋 One-click copy — copy any hex code or full code block instantly
+One-click copy — copy any hex code or full code block instantly
 
-💾 Save palettes — save to MongoDB via REST API
+Save palettes — save to MongoDB via REST API
 
-📱 Fully mobile responsive
+Fully mobile responsive
 
 
 
